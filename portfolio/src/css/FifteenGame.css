@@ -1,0 +1,79 @@
+.game-container1 {
+    display: flex; /* Asettaa elementit riviin */
+    flex-direction: column; /* Asettaa elementit pystyriviin */
+    align-items: center; /* Asettaa elementit keskelle vaakatasossa */
+    justify-content: center; /* Asettaa elementit keskelle pystysuunnassa */
+  }
+
+.game-board {
+    display: grid; /* Asettaa elementit ruudukkoon */
+    grid-template-columns: repeat(4, 1fr); /* Asettaa sarakkeiden määrän ja leveyden */
+    gap: 3px; /* Luo tilaa elementtien välille */
+    margin-bottom: 20px; /* Asettaa elementin alareunan etäisyyden */
+    border: 2px solid black; /* Asettaa reunuksen */
+    width: fit-content; /* Asettaa elementin leveyden */
+    margin: auto; /* Asettaa elementin keskelle vaakatasossa */
+    background: none; /* Asettaa taustavärin */
+    background-color: transparent; /* Asettaa taustavärin */
+    cursor: pointer; /* Asettaa kursorin muodon */
+
+
+  }
+  
+  .tile {
+    width: 60px; /* Asettaa elementin leveyden */
+    height: 60px; /* Asettaa elementin korkeuden */
+    display: flex; /* Asettaa elementit riviin */
+    justify-content: center; /* Asettaa elementit keskelle vaakatasossa */
+    align-items: center; /* Asettaa elementit keskelle pystysuunnassa */
+    border: 1px solid black; /* Asettaa reunuksen */
+    font-size: 24px; /*Asettaa fontin koon */
+    font-weight: bold; /* Asettaa tekstin paksuuden */
+  }
+
+  .tile {
+    color: #e91e63
+  }
+  
+  .tile-red {
+    background-color: #e91e63; 
+    color: white; 
+  }
+  
+  .tile-empty {
+    background-color: white; 
+    border: 1px solid black;
+    }
+    
+
+    /* Sekoita-nappi tyyli */
+.FifteenBtn {
+  padding: 10px 20px;
+  font-size: 16px; 
+  border: none; 
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-items: center;
+
+}
+
+.FifteenBtn:hover {
+  background-color: #0056b3; 
+}
+
+.game-board div, .game-container button{
+    position: relative;
+    z-index: 1; /* Above the particles */
+    pointer-events: none;
+}
+
+.game-board div, .game-container button{
+    pointer-events: auto;
+}
+
+.game-container h1{
+    color: #e91e63;
+}

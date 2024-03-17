@@ -1,0 +1,101 @@
+.wrapper{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background-color: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30 px rgba (35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+
+    background: rgba(255, 255, 255, 0.5);
+
+    flex-basis: 400px;
+    height: 540px;
+    width: 500px;
+    padding: 20px 35px;
+}   
+
+.screen{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.calc-button-row{
+display: flex;
+justify-content: space-between ;
+margin: 5% 0;
+}
+
+.calc-button{
+    backdrop-filter: blur(5.5px);
+-webkit-backdrop-filter: blur(5.5px);
+background: rgba(255, 255, 255, 0.75);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+color: #232323;
+flex-basis: 20%;
+font-family: inherit;
+font-size: 24px;
+height: 65px;
+
+}
+.calc-button:last-child{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background: #d72880;
+    
+}
+
+.calc-button:last-child:hover{
+    background: inherit    ;
+    color: inherit;
+
+}
+
+.calc-button:last-child:active{
+    background: #d72880;
+}
+
+.calc-button:hover{
+    background: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+.calc-button:active{
+    background: #d72880;
+}
+
+
+.double{
+    flex-basis: 47%;
+}
+
+.triple{
+    flex-basis: 73%;
+}
+
+.calc-buttons .calc-button{
+    position: relative;
+    z-index: 1; /* Above the particles */
+    pointer-events: none;
+}
+.calc-buttons .calc-button{
+pointer-events: auto;
+}

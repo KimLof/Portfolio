@@ -1,0 +1,16 @@
+.contactMe a{
+    position: relative;
+    z-index: 1; /* Above the particles */
+    pointer-events: none;
+}
+
+.contactMe a{
+    pointer-events: auto;
+}
+
+.contactMe h2{
+    color: #e91e63;
+}
+.contactMe h3{
+    color: #e91e63;
+}

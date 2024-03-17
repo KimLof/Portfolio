@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/ContactMe.css';
 
 const ContactMe = () => {
     const [name, setName] = useState('');
@@ -15,37 +16,14 @@ const ContactMe = () => {
     };
 
     return (
-        <div>
+        <div className='contactMe'>
             <h2>Contact Me</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea
-                        id="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    ></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <p>Feel free to send me a message!</p>
+            <p>If you have any questions or feedback, I would love to hear from you.</p>
+            <h3>Contact info</h3>
+            <p> You can reach me via email at <a href="mailto:kim@kimcode.fi"> kim@kimcode.fi</a>.</p>
+            <p>You can also find me on <a href="https://www.linkedin.com/in/kimlof/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+
         </div>
     );
 };

@@ -62,6 +62,7 @@ p {
 
 
 
+
 .links-content {
   display: flex;
   justify-content: center; /* center the link columns horizontally */
@@ -71,19 +72,26 @@ p {
   pointer-events: auto; /* re-enable pointer events for clickable items */
 }
 
+.header-content {
+  /* space to bottom*/
+  margin-bottom: 3rem;
+  top: 0;
+  position: absolute;
+} 
+
 .links-content {
   display: flex;
   justify-content: center; /* center the link columns horizontally */
 }
 /* Container that holds the text */
-.row, .column .row.mb{
+.row, .column .row.mb, .meColumn{
   position: relative;
   z-index: 1; /* Above the particles */
  /* pointer-events: none;  This allows mouse events to pass through */
  pointer-events: none;
 }
 /* Re-enable pointer-events for interactive elements */
-.container .row a, .column .row.mb a {
+.container .row a, .column .row.mb a, .meColumn a{
   pointer-events: auto;
 }
 

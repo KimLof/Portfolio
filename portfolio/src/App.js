@@ -7,6 +7,7 @@ import Calculator from "./Frontend/Calculator";
 import WeatherApp from "./Frontend/WeatherApp";
 import FifteenGame from "./Frontend/FifteenGame";
 import ContactMe from "./Frontend/ContactMe";
+import CurrencyConverter from "./Frontend/CurrencyConverter";
 
 function App() {
   const [content, setContent] = useState("home");
@@ -29,6 +30,8 @@ function App() {
         return <FifteenGame />;
       case "ContactMe":
         return <ContactMe />;
+      case "CurrencyConverter":
+        return <CurrencyConverter />;
       default:
         // Don't return anything if it's not "home", so only the logo shows
         return null;
@@ -72,7 +75,7 @@ function App() {
                         <a onClick={() => setContent("WeatherApp")}>Weather app</a>
                       </li>
                       <li>
-                        <a onClick={() => setContent("About")}>money muunnin :D</a>
+                        <a onClick={() => setContent("CurrencyConverter")}>Currency converter</a>
                       </li>
                       <li>
                         <a onClick={() => setContent("ContactMe")}>Contact me</a>
@@ -151,7 +154,7 @@ function App() {
             classNames="fade"
             unmountOnExit
           >
-            <div>
+            <div className="renderContent">
             {renderContent()}
             </div>
             </CSSTransition>
