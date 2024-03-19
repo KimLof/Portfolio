@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useCallback  } from 'react';
 import '../css/Calculator.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
 const Calculator = () => {
     const [currentValue, setCurrentValue] = useState('0');
     const [previousValue, setPreviousValue] = useState(null);
@@ -113,7 +116,41 @@ const Calculator = () => {
         };
     }, [currentValue, performOperation, inputDigit, inputDot, clearAll]);
 
+    const showCalculatorModal = (event) => {
+        event.stopPropagation(); // This stops the click event from reaching the SVG element.
+  
+        if(document.querySelector('.calculatorModal') === null) {
+            console.log("omena");
+        return;
+        }
+  
+        const modal = document.querySelector('.calculatorModal');
+  
+        if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+        } else
+        modal.style.display = 'block';
+    }
+
+              // modal close if pressed outside
+              window.onclick = function(event) {
+                if(document.querySelector('.calculatorModal') === null) {
+                    console.log(event.target);
+                return;    
+                }
+    
+                console.log(event.target);
+    
+                const modal = document.querySelector('.calculatorModal');
+    
+                if (event.target !== modal && !event.target.classList.contains('calculatorInfo')){
+                modal.style.display = 'none';
+                }
+            }
+
     return (
+        <div className="calculator-header">
+                    <h1 className="calculatorInfo" onClick={(event) => showCalculatorModal(event)} >Calculator <FontAwesomeIcon icon={faCircleInfo} /></h1>
         <div class ="wrapper">
             <section class="screen">
                 <div class="output">{currentValue}</div>
@@ -152,6 +189,15 @@ const Calculator = () => {
                 </div>
             </section>
         </div>
+        {/* Modal for calculator info and how to use */}
+        <div className="calculatorModal">
+            <div class="calculator-modal-content">
+                <h1>Calculator</h1>
+                <p>Simple calculator to do basic math operations. Use keyboard or mouse to use the calculator.</p>
+                <p>Press 'C' to clear the screen, 'Backspace' to remove last digit, 'Enter' or '=' to calculate, '+' to add, '-' to subtract, '*' to multiply and '/' to divide.</p>
+            </div>
+        </div>
+     </div>
     );
 };
 

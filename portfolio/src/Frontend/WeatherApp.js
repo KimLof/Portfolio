@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../css/WeatherApp.css';
 import cloudsImage from '../images/clouds.png';
 import clearImage from '../images/clear.png';
@@ -11,6 +11,8 @@ import drizzleImage from '../images/drizzle.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -62,11 +64,66 @@ const WeatherApp = () => {
         })
         .catch(() => setError(true));
     };
+
+
+    const showWeatherModal = (event) => {
+      event.stopPropagation(); // This stops the click event from reaching the SVG element.
+
+      if(document.querySelector('.WeatherModal') === null) {
+          console.log("omena");
+      return;
+      }
+
+      const modal = document.querySelector('.WeatherModal');
+
+      if (modal.style.display === 'block') {
+          modal.style.display = 'none';
+      } else
+      modal.style.display = 'block';
+  }
+
+          // modal close if pressed outside
+          window.onclick = function(event) {
+            if(document.querySelector('.WeatherModal') === null) {
+                console.log(event.target);
+            return;    
+            }
+
+            console.log(event.target);
+
+            const modal = document.querySelector('.WeatherModal');
+
+            if (event.target !== modal && !event.target.classList.contains('weatherInfo')){
+            modal.style.display = 'none';
+            }
+        }
+
+
+
+
+        //When enter pressd in input field fetch weather
+useEffect(() => { 
+  const handleEnter = (event) => {
+    if(event.key === 'Enter') {
+      fetchWeather();
+    }
+  }
+  window.addEventListener('keydown', handleEnter); 
+  return () => {
+    window.removeEventListener('keydown', handleEnter);
+  }
+}
+, [city]);
+
+
+
   
     return (
+      <div className='weatherHeader'>
+        <h1 className="weatherInfo" onClick={(event) => showWeatherModal(event)} >Weather App <FontAwesomeIcon icon={faCircleInfo} /></h1>
       <div className="weatherContainer" style={{ height: error || !weatherData ? '400px' : '590px' }}>
         <div className="weatherSearch-box">
-        <FontAwesomeIcon icon={faLocationDot} />
+        <p className='asd'><FontAwesomeIcon icon={faLocationDot} /></p>
           <input
             type="text"
             placeholder="Enter your location"
@@ -109,7 +166,17 @@ const WeatherApp = () => {
           </>
         )}
       </div>
+          {/* Modal for site info */}
+          <div className="WeatherModal" style={{ display: 'none' }} >
+            <div className="Weather-modal-content">
+              <h2>Weather App</h2>
+              <p>Weather app is a simple weather application that uses OpenWeatherMap API to fetch weather data. The app is built with React and styled with CSS. The app uses FontAwesome icons and images from OpenWeatherMap API. The app is a part of my portfolio. </p>
+            </div>
+          </div>
+      </div>
     );
   };
+
+  
   
   export default WeatherApp;

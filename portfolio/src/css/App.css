@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} 
 
 .fade-enter {
   opacity: 0;
@@ -64,6 +64,7 @@ p {
 
 
 .links-content {
+  top: 10%;
   display: flex;
   justify-content: center; /* center the link columns horizontally */
 }
@@ -77,9 +78,11 @@ p {
   margin-bottom: 3rem;
   top: 0;
   position: absolute;
+  z-index: 1;
 } 
 
 .links-content {
+  position: relative;
   display: flex;
   justify-content: center; /* center the link columns horizontally */
 }
@@ -93,6 +96,10 @@ p {
 /* Re-enable pointer-events for interactive elements */
 .container .row a, .column .row.mb a, .meColumn a{
   pointer-events: auto;
+}
+
+.logo {
+  z-index: 1; /* Above the particles */
 }
 
 /* Centering the logo and header */
@@ -156,6 +163,9 @@ canvas{
 }
 
 .links-column ul li{
+    text-align:  center;
+
+
     list-style: none;
     margin-right: 2rem;
     font-size: 1.8rem;
@@ -163,6 +173,7 @@ canvas{
 }
 
 .links-column h1{
+
     color: #fff;
     font-size: 2.5rem;
 }
@@ -183,5 +194,54 @@ canvas{
 
 .footer p{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1rem;
+}
+
+@media (max-height: 901px){
+    .links-content{
+      top: 30%;
+    }
+}
+
+@media (max-height: 780px){
+    .links-content{
+      top: 40%;
+    }
+    
+}
+
+@media (max-height: 734px){
+    .links-content{
+      top: 50%;
+    }
+}
+
+@media (max-height: 676px){
+    .links-content{
+      top: 60%;
+    }
+}
+
+@media (max-height: 621px){
+    .links-content{
+      top: 70%;
+    }
+}
+
+@media (max-height: 568px){
+    .links-content{
+      top: 80%;
+    }
+}
+
+@media (max-height: 511px){
+    .links-content{
+      top: 90%;
+    }
+}
+
+@media (max-height: 459px){
+    .links-content{
+      top: 110%;
+    }
 }

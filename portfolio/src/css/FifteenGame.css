@@ -1,8 +1,9 @@
-.game-container1 {
+.game-container {
     display: flex; /* Asettaa elementit riviin */
     flex-direction: column; /* Asettaa elementit pystyriviin */
     align-items: center; /* Asettaa elementit keskelle vaakatasossa */
     justify-content: center; /* Asettaa elementit keskelle pystysuunnassa */
+    position: relative; 
   }
 
 .game-board {
@@ -48,11 +49,12 @@
 
     /* Sekoita-nappi tyyli */
 .FifteenBtn {
+  margin-top: 5%;
   padding: 10px 20px;
   font-size: 16px; 
   border: none; 
   border-radius: 4px;
-  background-color: #007BFF;
+  background-color: #e91e63;
   color: white;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -61,19 +63,165 @@
 }
 
 .FifteenBtn:hover {
-  background-color: #0056b3; 
+  box-shadow: 0 0 10px #000;
+  background-color: #bb2c5c;
 }
 
-.game-board div, .game-container button{
+.game-board div, .game-container button, .fifteenGameHeader h1{
     position: relative;
     z-index: 1; /* Above the particles */
     pointer-events: none;
 }
 
-.game-board div, .game-container button{
+.game-board div, .game-container button, .fifteenGameHeader h1{
     pointer-events: auto;
 }
 
 .game-container h1{
     color: #e91e63;
+}
+
+
+.fifteenGameHeader{
+  position: relative;
+  top: 20%;
+}
+
+.FifteenGameModal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.FifteenGame-Modal-content{
+  /* middle of screen */
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.fifteenGameHeader h1{
+  color: #e91e63;
+}
+.fifteenGameHeader h1:hover{
+  color: #bb2c5c;
+  cursor: pointer;
+  text-shadow: 0 0 4px #000;
+}
+
+.FifteenGame-Modal-content h2{
+  color: #e91e63;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.FifteenGame-Modal-content p{
+  color: #06283D;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+@media (max-height: 900px){
+  .fifteenGameHeader{
+    top: 30%;
+  }
+}
+
+@media (max-height: 840px){
+  .fifteenGameHeader{
+    top: 40%;
+  }
+}
+
+@media (max-height: 752px){
+  .fifteenGameHeader{
+    top: 50%;
+  }
+}
+
+@media (max-height: 683px){
+  .fifteenGameHeader{
+    top: 60%;
+  }
+}
+
+@media (max-height: 614px){
+  .fifteenGameHeader{
+    top: 80%;
+  }
+}
+
+@media (max-height: 477px){
+  .fifteenGameHeader{
+    top: 90%;
+  }
+}
+
+@media (max-height: 400px){
+  .fifteenGameHeader{
+    top: 100%;
+  }
+}
+
+@media (max-height: 345px){
+  .fifteenGameHeader{
+    top: 110%;
+  }
+}
+
+@media (max-width: 1500px) {
+
+  .FifteenGame-Modal-content {
+    width: 30%;
+    left: 35%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .FifteenGame-Modal-content {
+    width: 35%;
+    left: 35%;
+  }
+}
+
+
+@media (max-width: 868px) {
+
+  .FifteenGame-Modal-content{
+    width: 40%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .FifteenGame-Modal-content {
+    width: 50%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .FifteenGame-Modal-content {
+    width: 80%;
+    left: 10%;
+  }
 }

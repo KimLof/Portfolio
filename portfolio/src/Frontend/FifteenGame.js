@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
  import '../css/FifteenGame.css';
 
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
 function shuffleArray(array) {
     let currentIndex = array.length, randomIndex;
 
@@ -110,9 +113,43 @@ function FifteenGame() {
         };
     }, [tiles, isGameStarted, moveTile]);
 
+    const showfifteenGameModal = (event) => {
+        event.stopPropagation(); // This stops the click event from reaching the SVG element.
+  
+        if(document.querySelector('.FifteenGameModal') === null) {
+            console.log("omena");
+        return;
+        }
+  
+        const modal = document.querySelector('.FifteenGameModal');
+  
+        if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+        } else
+        modal.style.display = 'block';
+    }
+  
+            // modal close if pressed outside
+            window.onclick = function(event) {
+              if(document.querySelector('.FifteenGameModal') === null) {
+                  console.log(event.target);
+              return;    
+              }
+  
+              console.log(event.target);
+  
+              const modal = document.querySelector('.FifteenGameModal');
+  
+              if (event.target !== modal && !event.target.classList.contains('fifteenGameInfo')){
+              modal.style.display = 'none';
+              }
+          }
+
     return (
+        <div className='fifteenGameHeader'>
+
+<h1 className="fifteenGameInfo" onClick={(event) => showfifteenGameModal(event)} >Fifteen game <FontAwesomeIcon icon={faCircleInfo} /></h1>
         <div className="game-container">
-            <h1 className='Otsikko'>15-game</h1>
             <div className="game-board">
                 {tiles.map((tile, index) => {
                     const isRed = [0, 1, 2, 3, 8, 9, 10, 11, ].includes(tile);
@@ -130,6 +167,16 @@ function FifteenGame() {
             <p> </p>
             <button className="FifteenBtn" onClick={shuffleTiles}>Shuffle</button>
         </div>
+        {/* Modal for info and how to use */}
+
+        <div className="FifteenGameModal">
+            <div className="FifteenGame-Modal-content">
+                <h2>Fifteen game</h2>
+                <p>Click on the tiles next to the empty space to move them. The goal is to get the numbers in order from 1 to 15, starting from the top left corner.</p>
+            </div>
+        </div>
+
+    </div>
     );
 }
 

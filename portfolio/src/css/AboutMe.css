@@ -1,0 +1,65 @@
+
+
+.AboutMeContainer{
+    position: relative;
+    top: 20%;
+}
+
+.AboutMeContainer ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2%;
+    margin-inline: 2rem;
+    text-align: left;
+}
+
+.aboutMe-list-container{
+    display: flex;
+    justify-content: center;
+  }
+
+
+@media (max-height: 900px) {
+    .AboutMeContainer{
+        top: 30%;
+    }
+}
+
+
+
+@media (max-height: 800px) {
+    .AboutMeContainer{
+        top: 35%;
+    }
+}
+
+@media (max-height: 700px) {
+    .AboutMeContainer{
+        top: 45%;
+    }
+}
+
+@media (max-height: 600px) {
+    .AboutMeContainer{
+        top: 60%;
+    }
+}
+
+@media (max-height: 500px) {
+    .AboutMeContainer{
+        top: 79%;
+    }
+}
+
+@media (max-height: 400px) {
+    .AboutMeContainer{
+        top: 95%;
+    }
+}
+
+@media (max-height: 300px) {
+    .AboutMeContainer{
+        top: 100%;
+    }
+}
