@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_KEYS from '../apiKeys';
 import '../css/CurrencyConverter.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion } from '@fortawesome/free-solid-svg-icons';
@@ -94,8 +95,9 @@ const CurrencyConverter = () => {
         }
 
     const haeValuuttakurssit = async () => {
+        const apiKeyOne = API_KEYS.apiKeyTwo;
         try {
-            const response = await axios.get('https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_lcqdjbgILcCN0cPDzuqGnKfwqp6lrXZK979ndV8c');
+            const response = await axios.get(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKeyOne}`);
             setValuutat(response.data.data);
         } catch (error) {
             console.error('Virhe valuuttakurssien haussa', error);

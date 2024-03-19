@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/WeatherApp.css';
+import API_KEYS from '../apiKeys';
 import cloudsImage from '../images/clouds.png';
 import clearImage from '../images/clear.png';
 import snowImage from '../images/snow.png';
@@ -47,9 +48,9 @@ const WeatherApp = () => {
   
     const fetchWeather = () => {
       if (!city) return;
-  
-      const APIKey = '309279414fa3d50a47854b04cde0caf4';
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`)
+      
+      const apiKeyOne = API_KEYS.apiKeyOne;
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKeyOne}&units=metric`)
         .then(response => response.json())
         .then(data => {
           if (data.cod === '404') {

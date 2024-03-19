@@ -98,10 +98,15 @@ p {
   pointer-events: auto;
 }
 
-.logo {
+.logo, .header {
   z-index: 1; /* Above the particles */
 }
 
+.header:hover{
+  color: #bb2c5c;
+  cursor: pointer;
+  text-shadow: 0 0 4px #000;
+}
 /* Centering the logo and header */
 .logo, .header, .row.mb, .links-list {
   text-align: center; /* Center the text */
@@ -158,8 +163,14 @@ canvas{
 
 .logo{
     font-family: 'Monoton', cursive;
-    color: #fff;
+    color:#e91e63;
     font-size: 10rem;
+}
+
+.logo:hover{
+    color: #bb2c5c;
+    cursor: pointer;
+    text-shadow: 0 0 4px #000;
 }
 
 .links-column ul li{
@@ -196,6 +207,7 @@ canvas{
     color: #fff;
     font-size: 1rem;
 }
+
 
 @media (max-height: 901px){
     .links-content{

@@ -18,7 +18,7 @@ const ContactMe = () => {
             <div className='contact-me-links'>
                 <a href="mailto:kim@kimcode.fi" target="_blank"><FontAwesomeIcon icon={faEnvelope} /></a>
                 <a href="https://www.linkedin.com/in/kimlof/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href="github.fi" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href="https://github.com/KimLof" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
                 </div>
         </div>
             

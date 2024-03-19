@@ -62,7 +62,7 @@ function App() {
             <a className="logo" onClick={() => handleLinkClick("home")}>
               K
             </a>
-            <h1 className="header">Kim's Portfolio</h1>
+            <h1 className="header" onClick={() => handleLinkClick("home")}>Kim's Portfolio</h1>
             <br />
           </div>
           <CSSTransition
