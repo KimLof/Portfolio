@@ -187,6 +187,7 @@ const CurrencyConverter = () => {
                 {/* Modal for currency explanatiosn */}
                 <div id="currencyModal" className="modal" style={{ display: 'none' }} >
                     <div className="modal-content">
+                    <span className="ModalCloseSpan">&times;</span>
                         <h2>Currency info</h2>
                         <div className="Currency-Infos">
                             {Object.entries(currencyDescriptions).map(([koodi, selitys]) => (
@@ -200,8 +201,11 @@ const CurrencyConverter = () => {
             {/* Modal for for info and how to use */}
             <div className="CurrencyInfoModal">
                 <div className="CurrencyInfo-Modal-content">
+                {/* X for closing */}
+                <span className="ModalCloseSpan">&times;</span>
                     <h2>Currency Converter</h2>
-                    <p>Convert currency from one to another. Select the source currency and the target currency, then enter the amount to be converted. Click the "Convert" button to see the result.</p>
+                    <p>Currency Converter fetches the latest currency rates from the Free Currency API. You can convert between 33 different currencies. Just type the amount you want to convert, select the source currency and the target currency and click the "Convert" button. The converted amount will be shown below the button.</p>
+                    <p>Click the question mark to see the currency codes and their descriptions.</p>
                 </div>
                 </div>
         </div>

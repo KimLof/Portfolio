@@ -13,12 +13,12 @@
   position: relative
 }
 
-.ConvertInput input, .Convert-Input-Group select, .CurrencyBtn, .modal-content, .CurrencyModalBtn, .Convert-Input-Group a, .CurrencyInfoHeader-header h1 {
+.ConvertInput input, .Convert-Input-Group select, .CurrencyBtn, .modal-content, .CurrencyModalBtn, .Convert-Input-Group a, .CurrencyInfoHeader-header h1, .ModalCloseSpan {
     position: relative;
     z-index: 1; /* Above the particles */
     pointer-events: none;
 }
-.ConvertInput input, .Convert-Input-Group select, .CurrencyBtn, .modal-content, .CurrencyModalBtn, .Convert-Input-Group a, .CurrencyInfoHeader-header h1{
+.ConvertInput input, .Convert-Input-Group select, .CurrencyBtn, .modal-content, .CurrencyModalBtn, .Convert-Input-Group a, .CurrencyInfoHeader-header h1, .ModalCloseSpan{
     pointer-events: auto;
 }
 .ConvertInput input {
@@ -163,10 +163,26 @@
 
 .Convert-Input-Group .CurrencyModalBtn{
   left: 13%;
-  /* Make it bigger */
   font-size: 1.5rem;
 }
 
+.ModalCloseSpan {
+  color: #bbb;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  /* top corner */
+  position: absolute;
+  right: 5%;
+  top: 1%;
+}
+
+.ModalCloseSpan:hover,
+.ModalCloseSpan:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 @media (max-width: 1500px) {
   .modal-content {

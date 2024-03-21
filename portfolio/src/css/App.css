@@ -83,7 +83,6 @@ p {
 
 .links-content {
   position: relative;
-  display: flex;
   justify-content: center; /* center the link columns horizontally */
 }
 /* Container that holds the text */
@@ -206,6 +205,14 @@ canvas{
 .footer p{
     color: #fff;
     font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .links-content {
+    top: 20%;
+    display: block;
+    padding: 10px;
+  }
 }
 
 

@@ -192,7 +192,8 @@ const Calculator = () => {
         {/* Modal for calculator info and how to use */}
         <div className="calculatorModal">
             <div class="calculator-modal-content">
-                <h1>Calculator</h1>
+            <span className="ModalCloseSpan">&times;</span>
+                <h2>Calculator</h2>
                 <p>Simple calculator to do basic math operations. Use keyboard or mouse to use the calculator.</p>
                 <p>Press 'C' to clear the screen, 'Backspace' to remove last digit, 'Enter' or '=' to calculate, '+' to add, '-' to subtract, '*' to multiply and '/' to divide.</p>
             </div>

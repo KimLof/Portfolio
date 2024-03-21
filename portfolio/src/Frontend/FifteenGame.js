@@ -171,8 +171,13 @@ function FifteenGame() {
 
         <div className="FifteenGameModal">
             <div className="FifteenGame-Modal-content">
-                <h2>Fifteen game</h2>
-                <p>Click on the tiles next to the empty space to move them. The goal is to get the numbers in order from 1 to 15, starting from the top left corner.</p>
+            <span className="ModalCloseSpan">&times;</span>
+            <h2>Welcome to the Fifteen Game!</h2>
+<p>To play, simply click on the tiles adjacent to the empty space to move them. Your objective is to arrange the numbers in order from 1 to 15, beginning from the top left corner.</p>
+<p>Ready to begin? Click the shuffle button to start the game.</p>
+<p>You can also use the arrow keys or W, A, S, D keys on your keyboard to move the tiles.</p>
+<p>Best of luck!</p>
+
             </div>
         </div>
 

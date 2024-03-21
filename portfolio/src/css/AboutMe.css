@@ -24,6 +24,21 @@
     justify-content: center;
   }
 
+  @media (max-width: 768px) {
+    .AboutMeContainer {
+      top: 25%;
+      display: block;
+        padding: 10px;
+    }
+    .AboutMeContainer ul li{
+        list-style: none;
+        font-size: 1rem;
+        color: white;
+        margin-bottom: 1%;
+        margin-inline: 1rem;
+        text-align: left;
+    }
+  }
 
 @media (max-height: 905px) {
     .AboutMeContainer{

@@ -40,18 +40,7 @@
     top: 20%;
 }
 
-.calculatorModal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+
 
 .calculator-modal-content{
     /* middle of screen */
@@ -151,13 +140,51 @@ height: 65px;
     flex-basis: 73%;
 }
 
-.calc-buttons .calc-button, .calculator-header h1{
+.calc-buttons .calc-button, .calculator-header h1, .ModalCloseSpan{
     position: relative;
     z-index: 1; /* Above the particles */
     pointer-events: none;
 }
-.calc-buttons .calc-button, .calculator-header h1{
+.calc-buttons .calc-button, .calculator-header h1, .ModalCloseSpan{
 pointer-events: auto;
+}
+
+.ModalCloseSpan {
+    color: #bbb;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    /* top corner */
+    position: absolute;
+    right: 5%;
+    top: 1%;
+  }
+  
+  .ModalCloseSpan:hover,
+  .ModalCloseSpan:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .calculatorModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    /* Dont allow button under modal to be pressed */
+    pointer-events: none;
+    
+    
+
 }
 
 @media (max-height: 900px) {

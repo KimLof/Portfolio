@@ -39,15 +39,29 @@
     color: #e91e63;
 }
 
+@media (max-width: 768px) {
+    .contactMe {
+      top: 20%;
+      display: block;
+      padding: 10px;
+    }
+  }
+
+@media (max-height: 905px) {
+    .contactMe{
+        top: 20%;
+    }
+}
+
 @media (max-height: 855px) {
     .contactMe{
-        top: 32%;
+        top: 38%;
     }
 }
 
 @media (max-height: 663px) {
     .contactMe{
-        top: 60%;
+        top: 6 0%;
     }
 }
 

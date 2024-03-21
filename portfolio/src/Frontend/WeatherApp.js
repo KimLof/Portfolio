@@ -127,7 +127,7 @@ useEffect(() => {
         <p className='asd'><FontAwesomeIcon icon={faLocationDot} /></p>
           <input
             type="text"
-            placeholder="Enter your location"
+            placeholder="Location"
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
@@ -170,8 +170,9 @@ useEffect(() => {
           {/* Modal for site info */}
           <div className="WeatherModal" style={{ display: 'none' }} >
             <div className="Weather-modal-content">
+            <span className="ModalCloseSpan">&times;</span>
               <h2>Weather App</h2>
-              <p>Weather app is a simple weather application that uses OpenWeatherMap API to fetch weather data. The app is built with React and styled with CSS. The app uses FontAwesome icons and images from OpenWeatherMap API. The app is a part of my portfolio. </p>
+              <p>Weather app fetches weather data from OpenWeatherMap API. You can search for weather data by typing the location in the search box and pressing enter or clicking the search button. The app shows the temperature, description, humidity and wind speed of the location. The app also shows an image of the weather condition.</p>
             </div>
           </div>
       </div>
