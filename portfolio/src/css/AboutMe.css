@@ -24,6 +24,16 @@
     justify-content: center;
   }
 
+  .aboutMe-list-container a{
+    position: relative;
+    z-index: 1; /* Above the particles */
+    pointer-events: none;
+}
+
+  .aboutMe-list-container a {
+    pointer-events: auto;
+  }
+
   @media (max-width: 768px) {
     .AboutMeContainer {
       top: 25%;

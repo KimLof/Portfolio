@@ -28,36 +28,38 @@ const AboutMe = () => {
             <h2 >My mostly used technologies</h2>
             <div className='aboutMe-list-container'>
             <ul className='first-list'>
-                <li><FontAwesomeIcon icon={faReact} /> React</li>
-                <li><FontAwesomeIcon icon={faJs} /> JavaScript</li>
-                <li><FontAwesomeIcon icon={faHtml5} /> HTML</li>
-                <li><FontAwesomeIcon icon={faCss3} /> CSS</li>
-                <li> <FontAwesomeIcon icon={faNode} /> Node</li>
+                <li><a href="https://www.w3schools.com/react/react_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faReact} /> React</a></li>
+                <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faJs} /> JavaScript</a></li>
+                <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faHtml5} /> HTML</a></li>
+                <li><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faCss3} /> CSS</a></li>
+                <li><a href="https://www.w3schools.com/nodejs/nodejs_intro.asp" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faNode} /> Node.js</a></li>
             </ul>
             <ul className='second-list'>
-            <li> <FontAwesomeIcon icon={faJava} /> Java</li>
-                <li> <FontAwesomeIcon icon={faC} /> C#</li>
-                <li><FontAwesomeIcon icon={faPython} /> Python</li>
+            <li> <a href="https://www.w3schools.com/java/java_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faJava} /> Java</a></li>
+                <li> <a href="https://www.w3schools.com/cs/cs_intro.php" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faC} /> C#</a></li>
+                <li><a href="https://www.w3schools.com/python/python_intro.asp" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faPython} /> Python</a></li>
             </ul>
             <ul className='third-list'>
-            <li> <FontAwesomeIcon icon={faDatabase} /> MySQL</li>
-                <li><FontAwesomeIcon icon={faDatabase} /> MongoDB</li>
+            <li> <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faDatabase} /> MySQL</a></li>
+                <li><a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faDatabase} /> MongoDB</a></li>
             </ul>
             </div>
-            <h2  >About This Site</h2>
-            <p>
-                This site has been created as a project showcase and a practice area for new skills that I learn along 
-                the way.  </p>
-                <p> It is built using React and the site's layout is designed with CSS.  </p>
-                <p className = "meColumn">
-                You can explore my code on 
-                <a href="https://github.com/KimLof" target="_blank" rel="noopener noreferrer"> GitHub</a>. 
-                It provides an overview of my projects and gives an example of my coding abilities.
-            </p>
-            <p>
-                You can return to main page by pressing F5 or clicking "K" logo.</p>
-                <p> I strive to add new projects regularly, so you can follow my progress and learning.
-            </p>
+            <h2>About This Site</h2>
+<p>This site serves as a portfolio showcasing my projects and introducing myself.</p>
+<p>It is crafted using React for dynamic functionality and styled with CSS for layout design.</p>
+<p>This is a single-page application, enabling seamless navigation between sections without page reloads.</p>
+<p class="meColumn">
+    Explore my code repository on 
+    <a href="https://github.com/KimLof" target="_blank" rel="noopener noreferrer">GitHub</a>, 
+    providing an overview of my projects and demonstrating my coding proficiency.
+</p>
+<p>
+    You can return to the main page by pressing F5 or clicking the "K" logo.
+</p>
+<p>
+    I am committed to continually adding new projects, allowing you to track my progress and learning journey.
+</p>
+
         </div>
     );
 };
